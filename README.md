@@ -33,6 +33,19 @@ Your data is saved automatically in your browser's local storage and persists be
 
 ---
 
+## ⚠️ Data & Storage Warning
+
+All your data (prices, edits, settings, price history) is saved **locally in your browser only**.
+Clearing your browser history, cache, or site data will **permanently delete everything** ! There is no recovery.
+
+**Exporting to CSV does NOT save everything.**
+The CSV only backs up your product list and prices. Your price history, stars, and settings are not included in the export and will be lost if you clear your browser data.
+
+To reduce the risk, export your CSV from time to time and keep it somewhere safe on your computer.
+Downloaded CSV files are saved on your hard drive and are NOT affected by clearing your browser cache.
+
+---
+
 ## 🔄 Keeping up with game updates
 
 The app ships with built-in default data for **game version 1.2.1**. If the game gets updated and prices or products change, you don't need to wait for the app itself to be updated - you can update the data yourself using the CSV file.
