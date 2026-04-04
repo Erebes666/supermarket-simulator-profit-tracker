@@ -733,8 +733,13 @@
       <span class="warn-icon">⚠️</span>
       <div class="warn-text">
         <strong>Your data is saved in your browser only.</strong>
-        Clearing your browser history, cache, or site data will permanently delete all your tracked prices, edits, and settings — there is no way to recover them.
-        <div class="warn-safe">✔ Downloaded CSV files are saved on your computer and are not affected by clearing your browser data — export regularly as a backup.</div>
+        Clearing your browser history, cache, or site data will permanently
+        delete all your tracked prices, edits, and settings - there is no way to
+        recover them.
+        <div class="warn-safe">
+          ✔ Downloaded CSV files are saved on your computer and are not affected
+          by clearing your browser data - export regularly as a backup.
+        </div>
       </div>
       <button class="warn-dismiss" onclick="dismissWarning()">Got it</button>
     </div>
@@ -7021,16 +7026,17 @@ ${histHTML}`;
 
       // ─── WARNING BANNER DISMISS ───────────────────────────────────────────────────
       function dismissWarning() {
-        const banner = document.getElementById('storage-warning');
+        const banner = document.getElementById("storage-warning");
         if (banner) {
-          banner.style.maxHeight = banner.scrollHeight + 'px';
-          banner.style.overflow = 'hidden';
+          banner.style.maxHeight = banner.scrollHeight + "px";
+          banner.style.overflow = "hidden";
           requestAnimationFrame(() => {
-            banner.style.transition = 'max-height 0.35s ease, opacity 0.35s ease, padding 0.35s ease';
-            banner.style.maxHeight = '0';
-            banner.style.opacity = '0';
-            banner.style.paddingTop = '0';
-            banner.style.paddingBottom = '0';
+            banner.style.transition =
+              "max-height 0.35s ease, opacity 0.35s ease, padding 0.35s ease";
+            banner.style.maxHeight = "0";
+            banner.style.opacity = "0";
+            banner.style.paddingTop = "0";
+            banner.style.paddingBottom = "0";
           });
           setTimeout(() => banner.remove(), 370);
         }
