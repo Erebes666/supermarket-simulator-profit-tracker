@@ -1,10 +1,10 @@
-# 🛒 Supermarket Simulator — Profit Tracker
+# 🛒 Supermarket Simulator - Profit Tracker
 
-An unofficial fan-made profit tracking tool for [Supermarket Simulator](https://store.steampowered.com/app/2670630/Supermarket_Simulator/). Log your market prices, calculate online vs pickup profits, compare products side by side, and visualise your most profitable items — all in a single HTML file that runs directly in your browser with no installation required.
+An unofficial fan-made profit tracking tool for [Supermarket Simulator](https://store.steampowered.com/app/2670630/Supermarket_Simulator/). Log your market prices, calculate online vs pickup profits, compare products side by side, and visualise your most profitable items - all in a single HTML file that runs directly in your browser with no installation required.
 
 > **Disclaimer:** This is an unofficial fan-made tool, not affiliated with or endorsed by Nokta Games. All game content, product names, and trademarks belong to their respective owners.
 
-> 🌍 *The interface is in English but the tool is straightforward to use — just open the file in your browser.*
+> 🌍 *The interface is in English but the tool is straightforward to use - just open the file in your browser.*
 
 ---
 
@@ -12,7 +12,7 @@ An unofficial fan-made profit tracking tool for [Supermarket Simulator](https://
 
 | File | Description |
 |---|---|
-| `supermarketSimulator-tracker_v2_1.html` | The app — open this in your browser |
+| `supermarketSimulator-tracker_v2_1.html` | The app - open this in your browser |
 | `supermarket-tracker-data-v1.2.1.csv` | Default product data for game version 1.2.1 |
 | `LICENSE` | MIT licence |
 | `README.md` | This file |
@@ -23,7 +23,7 @@ An unofficial fan-made profit tracking tool for [Supermarket Simulator](https://
 
 1. Download `supermarketSimulator-tracker_v2_1.html`
 2. Open it in any modern browser (Chrome, Firefox, Edge, Safari)
-3. That's it — no install, no server, no account needed
+3. That's it - no install, no server, no account needed
 
 Your data is saved automatically in your browser's local storage and persists between sessions as long as you use the same browser.
 
@@ -31,12 +31,12 @@ Your data is saved automatically in your browser's local storage and persists be
 
 ## 🔄 Keeping up with game updates
 
-The app ships with built-in default data for **game version 1.2.1**. If the game gets updated and prices or products change, you don't need to wait for the app itself to be updated — you can update the data yourself using the CSV file.
+The app ships with built-in default data for **game version 1.2.1**. If the game gets updated and prices or products change, you don't need to wait for the app itself to be updated - you can update the data yourself using the CSV file.
 
 ### How to update product data
 
 1. Open `supermarket-tracker-data-v1.2.1.csv` in any spreadsheet app (Excel, Google Sheets, LibreOffice) or a plain text editor
-2. Edit the values you need — prices, new products, items per box, etc.
+2. Edit the values you need - prices, new products, items per box, etc.
 3. In the app, click **Import CSV** and paste in your updated CSV content
 4. The app will load your new data while preserving any price history you've already logged, as long as product names haven't changed
 
@@ -46,7 +46,7 @@ The app ships with built-in default data for **game version 1.2.1**. If the game
 
 | Column | Description | Example values |
 |---|---|---|
-| `License` | License tier — base game: `0`–`29`, DLC: `DLC-Bakery-1` | `5`, `DLC-Clothing-2` |
+| `License` | License tier - base game: `0`–`29`, DLC: `DLC-Bakery-1` | `5`, `DLC-Clothing-2` |
 | `Category` | Product category | `Soda`, `Meat`, `Cake` |
 | `Brand` | Brand name, or `-` if none | `ColaCola`, `-` |
 | `Storage` | Storage type | `Shelf`, `Fridge`, `Freezer`, `Produce Stall`, `Bakery Shelf`, `Pegboard`, `Hanger Rack`, `Ice Cream Stand` |
@@ -60,7 +60,7 @@ The app ships with built-in default data for **game version 1.2.1**. If the game
 | `IsVending` | Whether vending machine compatible | `true` / `false` |
 | `DLC` | DLC group name, blank for base game | `Bakery`, `Clothing`, `Electronics`, `Hardware`, `Essentials`, `IceCream` |
 
-You can also export your current product list at any time using the **Export CSV** button in the app — this gives you a file in the exact same format, which is a handy starting point for edits.
+You can also export your current product list at any time using the **Export CSV** button in the app - this gives you a file in the exact same format, which is a handy starting point for edits.
 
 ---
 
@@ -71,7 +71,7 @@ Overview of all tracked products with key stats at a glance:
 - Total products tracked and how many have prices logged
 - Average online and pickup profit per box
 - Charts for profit distribution, storage type breakdown, and top products by profit margin
-- Profit margin % chart — shows which products give the best return relative to their sell price (unlocks once you start logging prices)
+- Profit margin % chart - shows which products give the best return relative to their sell price (unlocks once you start logging prices)
 
 ### 📦 Products tab
 Full sortable and filterable product table with:
@@ -118,15 +118,15 @@ Toggle DLC categories on/off using the bar at the top of the page. Disabling a D
 
 ## 💾 Data management
 
-- **Export CSV** — saves your full product list with current prices to a `.csv` file
-- **Import CSV** — loads a product list from a CSV file (price history is preserved for matching product names)
-- **Reset** — clears all price history and restores the built-in default values
+- **Export CSV** - saves your full product list with current prices to a `.csv` file
+- **Import CSV** - loads a product list from a CSV file (price history is preserved for matching product names)
+- **Reset** - clears all price history and restores the built-in default values
 
 ---
 
 ## 🛠️ Tech
 
-- Pure HTML + CSS + JavaScript — single file, zero dependencies to install
+- Pure HTML + CSS + JavaScript - single file, zero dependencies to install
 - [Chart.js](https://www.chartjs.org/) loaded from CDN for charts
 - Data stored in browser `localStorage`
 
@@ -134,4 +134,4 @@ Toggle DLC categories on/off using the bar at the top of the page. Disabling a D
 
 ## 📄 Licence
 
-MIT — see [LICENSE](LICENSE) for details.
+MIT - see [LICENSE](LICENSE) for details.
