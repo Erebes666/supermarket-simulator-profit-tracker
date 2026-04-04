@@ -41,8 +41,8 @@ Clearing your browser history, cache, or site data will **permanently delete eve
 **Exporting to CSV does NOT save everything.**
 The CSV only backs up your product list and prices. Your price history, stars, and settings are not included in the export and will be lost if you clear your browser data.
 
-To reduce the risk, export your CSV from time to time and keep it somewhere safe on your computer.
-Downloaded CSV files are saved on your hard drive and are NOT affected by clearing your browser cache.
+To reduce the risk, use the function **Backup** from time to time. This will create a JSON file with EVERYTHING on it (price history, stars, settings , etc...).
+To restore it use the function **Restore**
 
 ---
 
