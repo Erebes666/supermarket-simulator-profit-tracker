@@ -52,6 +52,64 @@
         min-height: 100vh;
       }
 
+      /* WARNING BANNER */
+      #storage-warning {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 9px 14px;
+        background: #2d1f07;
+        border-bottom: 1px solid #78450a;
+        font-size: 12px;
+        color: #fbbf24;
+        line-height: 1.5;
+      }
+      #storage-warning .warn-icon {
+        font-size: 15px;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+      #storage-warning .warn-text {
+        flex: 1;
+      }
+      #storage-warning .warn-text strong {
+        font-weight: 600;
+      }
+      #storage-warning .warn-text .warn-safe {
+        color: #86efac;
+        margin-top: 2px;
+      }
+      #storage-warning .warn-dismiss {
+        background: none;
+        border: 1px solid #78450a;
+        color: #fbbf24;
+        border-radius: 5px;
+        padding: 2px 9px;
+        font-size: 11px;
+        cursor: pointer;
+        flex-shrink: 0;
+        margin-top: 1px;
+        transition: background 0.15s;
+      }
+      #storage-warning .warn-dismiss:hover {
+        background: #3d2a0a;
+      }
+      body.light #storage-warning {
+        background: #fffbeb;
+        border-bottom-color: #d97706;
+        color: #92400e;
+      }
+      body.light #storage-warning .warn-safe {
+        color: #166534;
+      }
+      body.light #storage-warning .warn-dismiss {
+        border-color: #d97706;
+        color: #92400e;
+      }
+      body.light #storage-warning .warn-dismiss:hover {
+        background: #fef3c7;
+      }
+
       /* DLC BAR */
       .dlc-bar {
         display: flex;
@@ -671,6 +729,16 @@
     </style>
   </head>
   <body>
+    <div id="storage-warning">
+      <span class="warn-icon">⚠️</span>
+      <div class="warn-text">
+        <strong>Your data is saved in your browser only.</strong>
+        Clearing your browser history, cache, or site data will permanently delete all your tracked prices, edits, and settings — there is no way to recover them.
+        <div class="warn-safe">✔ Downloaded CSV files are saved on your computer and are not affected by clearing your browser data — export regularly as a backup.</div>
+      </div>
+      <button class="warn-dismiss" onclick="dismissWarning()">Got it</button>
+    </div>
+
     <div class="dlc-bar" id="dlcBar">
       <span class="dlc-label">DLC:</span>
     </div>
@@ -6949,6 +7017,23 @@ ${histHTML}`;
         cancelPending();
         destroyAllCharts();
         setTimeout(() => renderCurrentTab(), 0);
+      }
+
+      // ─── WARNING BANNER DISMISS ───────────────────────────────────────────────────
+      function dismissWarning() {
+        const banner = document.getElementById('storage-warning');
+        if (banner) {
+          banner.style.maxHeight = banner.scrollHeight + 'px';
+          banner.style.overflow = 'hidden';
+          requestAnimationFrame(() => {
+            banner.style.transition = 'max-height 0.35s ease, opacity 0.35s ease, padding 0.35s ease';
+            banner.style.maxHeight = '0';
+            banner.style.opacity = '0';
+            banner.style.paddingTop = '0';
+            banner.style.paddingBottom = '0';
+          });
+          setTimeout(() => banner.remove(), 370);
+        }
       }
 
       // ─── INIT ─────────────────────────────────────────────────────────────────────
