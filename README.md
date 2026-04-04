@@ -25,7 +25,7 @@ An unofficial fan-made profit tracking tool for [Supermarket Simulator](https://
 
 ## 🚀 How to use
 
-1. Download `supermarketSimulator-tracker_v2_1.html`
+1. Download `supermarketSimulator-tracker_v2_2.html`
 2. Open it in any modern browser (Chrome, Firefox, Edge, Safari)
 3. That's it - no install, no server, no account needed
 
