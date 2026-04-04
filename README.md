@@ -19,6 +19,7 @@ An unofficial fan-made profit tracking tool for [Supermarket Simulator](https://
 | `supermarket-tracker-data-v1.2.1.csv` | Default product data for game version 1.2.1 |
 | `LICENSE` | MIT licence |
 | `README.md` | This file |
+| `Assets` | Some screenshots of the UI |
 
 ---
 
