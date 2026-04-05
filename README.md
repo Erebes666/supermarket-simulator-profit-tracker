@@ -52,7 +52,7 @@ The app ships with built-in default data for **game version 1.2.1**. If the game
 
 ### How to update product data
 
-1. Open `supermarket-tracker-data-v1.2.3.csv` in any spreadsheet app (Excel, Google Sheets, LibreOffice) or a plain text editor (better as Excel can change your document)
+1. Open `supermarket-tracker-export.csv` in any spreadsheet app (Excel, Google Sheets, LibreOffice) or a plain text editor (better as Excel can change your document)
 2. Edit the values you need - prices, new products, items per box, etc.
 3. In the app, click **Import CSV** and paste in your updated CSV content (not the file, its content)
 4. The app will load your new data while preserving any price history you've already logged, as long as product names haven't changed
