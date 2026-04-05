@@ -7,7 +7,7 @@ An unofficial fan-made profit tracking tool for [Supermarket Simulator](https://
 > 🌍 *The interface is in English but the tool is straightforward to use - just open the file in your browser.*
 
 
-![App screenshot](https://github.com/Erebes666/supermarket-simulator-profit-tracker/blob/main/Assets/SuperMarketTracker_UI_1.png)
+![App screenshot](https://github.com/Erebes666/supermarket-simulator-profit-tracker/blob/main/Assets/SuperMarketTracker_UI1.png)
 
 ---
 
@@ -15,7 +15,7 @@ An unofficial fan-made profit tracking tool for [Supermarket Simulator](https://
 
 | File | Description |
 |---|---|
-| `supermarketSimulator-tracker_v2_1.html` | The app - open this in your browser |
+| `supermarketSimulator-tracker_v2_3.html` | The app - open this in your browser |
 | `supermarket-tracker-data-v1.2.1.csv` | Default product data for game version 1.2.1 |
 | `LICENSE` | MIT licence |
 | `README.md` | This file |
@@ -25,7 +25,7 @@ An unofficial fan-made profit tracking tool for [Supermarket Simulator](https://
 
 ## 🚀 How to use
 
-1. Download `supermarketSimulator-tracker_v2_2.html`
+1. Download `supermarketSimulator-tracker_v2_3.html`
 2. Open it in any modern browser (Chrome, Firefox, Edge, Safari)
 3. That's it - no install, no server, no account needed
 
@@ -41,8 +41,8 @@ Clearing your browser history, cache, or site data will **permanently delete eve
 **Exporting to CSV does NOT save everything.**
 The CSV only backs up your product list and prices. Your price history, stars, and settings are not included in the export and will be lost if you clear your browser data.
 
-To reduce the risk, use the function **Backup** from time to time. This will create a JSON file with EVERYTHING on it (price history, stars, settings , etc...).
-To restore it use the function **Restore**
+To save your price history, stars, and settings, use the function **Backup** from time to time. This will create a JSON file with EVERYTHING on it (price history, stars, settings , etc...).
+To restore it use the function **Restore** and select the JSON file
 
 ---
 
@@ -52,9 +52,9 @@ The app ships with built-in default data for **game version 1.2.1**. If the game
 
 ### How to update product data
 
-1. Open `supermarket-tracker-data-v1.2.1.csv` in any spreadsheet app (Excel, Google Sheets, LibreOffice) or a plain text editor
+1. Open `supermarket-tracker-data-v1.2.3.csv` in any spreadsheet app (Excel, Google Sheets, LibreOffice) or a plain text editor (better as Excel can change your document)
 2. Edit the values you need - prices, new products, items per box, etc.
-3. In the app, click **Import CSV** and paste in your updated CSV content
+3. In the app, click **Import CSV** and paste in your updated CSV content (not the file, its content)
 4. The app will load your new data while preserving any price history you've already logged, as long as product names haven't changed
 
 > ⚠️ **Important:** A product's name is built from its `Category` and `Brand` columns (e.g. `Soda - ColaCola`). If you change those columns, the product is treated as a new one and its price history will be lost. Only rename a product if it genuinely changed in the game.
@@ -106,7 +106,7 @@ Side-by-side comparison of 2 or more products, with a profit chart and key stats
 
 ## 🔍 Product detail modal
 
-Click any product to open its detail view:
+Click any product in the "Products tab" to open its detail view:
 - Current profit stats (online and pickup, per item and per box)
 - Profit evolution chart if you've logged multiple price updates
 - Log a price update by entering the current Market sell price and Online buy price
@@ -135,8 +135,11 @@ Toggle DLC categories on/off using the bar at the top of the page. Disabling a D
 
 ## 💾 Data management
 
+- **Download CSV Template** - saves the full product list with default prices to a `.csv` file (useful when strating a new game)
 - **Export CSV** - saves your full product list with current prices to a `.csv` file
 - **Import CSV** - loads a product list from a CSV file (price history is preserved for matching product names)
+- **Backup** - saves your price history, stars, and settings to a `.JSON` file
+- **Restore** - Restore your price history, stars, and settings from a selected `.JSON` file
 - **Reset** - clears all price history and restores the built-in default values
 
 ---
@@ -146,6 +149,7 @@ Toggle DLC categories on/off using the bar at the top of the page. Disabling a D
 - Pure HTML + CSS + JavaScript - single file, zero dependencies to install
 - [Chart.js](https://www.chartjs.org/) loaded from CDN for charts
 - Data stored in browser `localStorage`
+- Data saved in a local `JSON` file if used the backup function
 
 ---
 
