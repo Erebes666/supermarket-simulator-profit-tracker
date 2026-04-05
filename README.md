@@ -15,7 +15,7 @@ An unofficial fan-made profit tracking tool for [Supermarket Simulator](https://
 
 | File | Description |
 |---|---|
-| `supermarketSimulator-tracker_v2_3.html` | The app - open this in your browser |
+| `supermarketSimulator-tracker_v2_4.html` | The app - open this in your browser |
 | `supermarket-tracker-data-v1.2.1.csv` | Default product data for game version 1.2.1 |
 | `LICENSE` | MIT licence |
 | `README.md` | This file |
@@ -25,7 +25,7 @@ An unofficial fan-made profit tracking tool for [Supermarket Simulator](https://
 
 ## 🚀 How to use
 
-1. Download `supermarketSimulator-tracker_v2_3.html`
+1. Download `supermarketSimulator-tracker_v2_4.html`
 2. Open it in any modern browser (Chrome, Firefox, Edge, Safari)
 3. That's it - no install, no server, no account needed
 
