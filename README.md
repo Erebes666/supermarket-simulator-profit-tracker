@@ -4,8 +4,7 @@ An unofficial fan-made profit tracking tool for [Supermarket Simulator](https://
 
 > **Disclaimer:** This is an unofficial fan-made tool, not affiliated with or endorsed by Nokta Games. All game content, product names, and trademarks belong to their respective owners.
 
-> 🌍 *The interface is in English but the tool is straightforward to use - just open the file in your browser.*
-
+> 🌍 _The interface is in English but the tool is straightforward to use - just open the file in your browser._
 
 ![App screenshot](https://github.com/Erebes666/supermarket-simulator-profit-tracker/blob/main/Assets/SuperMarketTracker_UI1.png)
 
@@ -13,20 +12,20 @@ An unofficial fan-made profit tracking tool for [Supermarket Simulator](https://
 
 ## 📁 Repository contents
 
-| File | Description |
-|---|---|
-| `supermarketSimulator-tracker_v2_5.html` | The app - open this in your browser |
-| `supermarket-tracker-data-v1.2.1.csv` | Default product data for game version 1.2.1 |
-| `LICENSE` | MIT licence |
-| `README.md` | This file |
-| `Assets` | Some screenshots of the UI |
-| `Changelog.md` | List of the changes for each version
+| File                                     | Description                                 |
+| ---------------------------------------- | ------------------------------------------- |
+| `supermarketSimulator-tracker_v2_6.html` | The app - open this in your browser         |
+| `supermarket-tracker-data-v1.2.1.csv`    | Default product data for game version 1.2.1 |
+| `LICENSE`                                | MIT licence                                 |
+| `README.md`                              | This file                                   |
+| `Assets`                                 | Some screenshots of the UI                  |
+| `Changelog.md`                           | List of the changes for each version        |
 
 ---
 
 ## 🚀 How to use
 
-1. Download `supermarketSimulator-tracker_v2_5.html`
+1. Download `supermarketSimulator-tracker_v2_6.html`
 2. Open it in any modern browser (Chrome, Firefox, Edge, Safari)
 3. That's it - no install, no server, no account needed
 
@@ -62,21 +61,21 @@ The app ships with built-in default data for **game version 1.2.1**. If the game
 
 ### CSV column reference
 
-| Column | Description | Example values |
-|---|---|---|
-| `License` | License tier - base game: `0`–`29`, DLC: `DLC-Bakery-1` | `5`, `DLC-Clothing-2` |
-| `Category` | Product category | `Soda`, `Meat`, `Cake` |
-| `Brand` | Brand name, or `-` if none | `ColaCola`, `-` |
-| `Storage` | Storage type | `Shelf`, `Fridge`, `Freezer`, `Produce Stall`, `Bakery Shelf`, `Pegboard`, `Hanger Rack`, `Ice Cream Stand` |
-| `ItemsOrWeight` | Items per box, or kg per box for produce | `24`, `2.5` |
-| `ShelfCap` | Items that fit on one shelf slot | `12` |
-| `MarketSellPrice` | Default sell price per item (or per kg for produce) | `3.49` |
-| `OnlineBuyPrice` | Default online buy price per full box | `49.99` |
-| `LocalMarket` | Pickup market name, or `-` if no pickup | `Deli and Grocery` |
-| `HasPickup` | Whether pickup is available | `true` / `false` |
-| `IsWeightBased` | Whether sold by weight (produce) | `true` / `false` |
-| `IsVending` | Whether vending machine compatible | `true` / `false` |
-| `DLC` | DLC group name, blank for base game | `Bakery`, `Clothing`, `Electronics`, `Hardware`, `Essentials`, `IceCream` |
+| Column            | Description                                             | Example values                                                                                              |
+| ----------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `License`         | License tier - base game: `0`-`29`, DLC: `DLC-Bakery-1` | `5`, `DLC-Clothing-2`                                                                                       |
+| `Category`        | Product category                                        | `Soda`, `Meat`, `Cake`                                                                                      |
+| `Brand`           | Brand name, or `-` if none                              | `ColaCola`, `-`                                                                                             |
+| `Storage`         | Storage type                                            | `Shelf`, `Fridge`, `Freezer`, `Produce Stall`, `Bakery Shelf`, `Pegboard`, `Hanger Rack`, `Ice Cream Stand` |
+| `ItemsOrWeight`   | Items per box, or kg per box for produce                | `24`, `2.5`                                                                                                 |
+| `ShelfCap`        | Items that fit on one shelf slot                        | `12`                                                                                                        |
+| `MarketSellPrice` | Default sell price per item (or per kg for produce)     | `3.49`                                                                                                      |
+| `OnlineBuyPrice`  | Default online buy price per full box                   | `49.99`                                                                                                     |
+| `LocalMarket`     | Pickup market name, or `-` if no pickup                 | `Deli and Grocery`                                                                                          |
+| `HasPickup`       | Whether pickup is available                             | `true` / `false`                                                                                            |
+| `IsWeightBased`   | Whether sold by weight (produce)                        | `true` / `false`                                                                                            |
+| `IsVending`       | Whether vending machine compatible                      | `true` / `false`                                                                                            |
+| `DLC`             | DLC group name, blank for base game                     | `Bakery`, `Clothing`, `Electronics`, `Hardware`, `Essentials`, `IceCream`                                   |
 
 You can also export your current product list at any time using the **Export CSV** button in the app - this gives you a file in the exact same format, which is a handy starting point for edits.
 
@@ -85,22 +84,32 @@ You can also export your current product list at any time using the **Export CSV
 ## ✨ Features
 
 ### 📊 Dashboard
+
 Overview of all tracked products with key stats at a glance:
+
 - Total products tracked and how many have prices logged
 - Average online and pickup profit per box
 - Charts for profit distribution, storage type breakdown, and top products by profit margin
 - Profit margin % chart - shows which products give the best return relative to their sell price (unlocks once you start logging prices)
 
 ### 📦 Products tab
+
 Full sortable and filterable product table with:
+
 - Profit per item and per box for both online and pickup channels
 - Filter by storage type, search by name
 - Group by License tier or Storage type using the sidebar
 
 ### 🏆 Leaderboard
+
 Ranks all products with logged prices by profitability. Useful for quickly spotting your best earners.
 
-### ⚖️ Compare
+## 🗂️ Licence Content
+
+Side-by-side comparison of all products of the selected licence (ALL excluded), with a profit chart and key stats for each.
+
+### ⚖️ Compare Products
+
 Side-by-side comparison of 2 or more products, with a profit chart and key stats for each.
 
 ---
@@ -108,6 +117,7 @@ Side-by-side comparison of 2 or more products, with a profit chart and key stats
 ## 🔍 Product detail modal
 
 Click any product in the "Products tab" to open its detail view:
+
 - Current profit stats (online and pickup, per item and per box)
 - Profit evolution chart if you've logged multiple price updates
 - Log a price update by entering the current Market sell price and Online buy price
@@ -120,12 +130,12 @@ Click any product in the "Products tab" to open its detail view:
 
 ## 🧮 How profits are calculated
 
-| Term | Formula |
-|---|---|
-| **Online profit / item** | `(Market price × items per box − online buy price) ÷ items per box` |
-| **Online profit / box** | `Market price × items per box − online buy price` |
-| **Pickup profit** | Same formula but using the local market buy price instead of online |
-| **Profit margin %** | `Online profit per item ÷ Market sell price × 100` |
+| Term                     | Formula                                                             |
+| ------------------------ | ------------------------------------------------------------------- |
+| **Online profit / item** | `(Market price x items per box - online buy price) ÷ items per box` |
+| **Online profit / box**  | `Market price x items per box - online buy price`                   |
+| **Pickup profit**        | Same formula but using the local market buy price instead of online |
+| **Profit margin %**      | `Online profit per item ÷ Market sell price x 100`                  |
 
 ---
 
