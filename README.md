@@ -104,7 +104,7 @@ Full sortable and filterable product table with:
 
 Ranks all products with logged prices by profitability. Useful for quickly spotting your best earners.
 
-## 🗂️ Licence Content
+### 🗂️ Licence Content
 
 Side-by-side comparison of all products of the selected licence (ALL excluded), with a profit chart and key stats for each.
 
