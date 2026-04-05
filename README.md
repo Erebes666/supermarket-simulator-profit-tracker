@@ -20,6 +20,7 @@ An unofficial fan-made profit tracking tool for [Supermarket Simulator](https://
 | `LICENSE` | MIT licence |
 | `README.md` | This file |
 | `Assets` | Some screenshots of the UI |
+| `Changelog.md` | List of the changes for each version
 
 ---
 
