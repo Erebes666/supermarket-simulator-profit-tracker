@@ -111,8 +111,9 @@ Click any product in the "Products tab" to open its detail view:
 - Current profit stats (online and pickup, per item and per box)
 - Profit evolution chart if you've logged multiple price updates
 - Log a price update by entering the current Market sell price and Online buy price
-  - Use the **±10% quick buttons** next to the Market price to adjust by 10% at a time
+  - Use the **±10% / ±5% or quick buttons** next to the Market price to adjust by 5% or 10% at a time
   - Live profit preview updates instantly as you type
+  - In case of error or if some clean up is needed you can delete entries manually
 - Full price history for that product
 
 ---
