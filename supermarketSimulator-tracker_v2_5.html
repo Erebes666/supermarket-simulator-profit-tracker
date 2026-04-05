@@ -754,7 +754,7 @@
     </div>
 
     <div class="topbar">
-      <div class="logo">Supermarket Tracker <span>v2.3</span></div>
+      <div class="logo">Supermarket Tracker <span>v2.5</span></div>
       <input
         type="text"
         id="searchInput"
@@ -5792,9 +5792,12 @@
       // ─── LICENSE BAR (dynamic) ──────────────────────────────────────────────────
       function getKnownLicenses() {
         const seen = new Set();
-        state.products.forEach((p) => { if (p.license != null) seen.add(p.license); });
+        state.products.forEach((p) => {
+          if (p.license != null) seen.add(p.license);
+        });
         return [...seen].sort((a, b) => {
-          const an = parseInt(a), bn = parseInt(b);
+          const an = parseInt(a),
+            bn = parseInt(b);
           if (!isNaN(an) && !isNaN(bn)) return an - bn;
           if (!isNaN(an)) return -1;
           if (!isNaN(bn)) return 1;
@@ -5820,7 +5823,7 @@
         const lics = getKnownLicenses();
         bar.innerHTML = '<span class="dlc-label">License:</span>';
         // "All" toggle chip
-        const allOn = lics.every(l => licenseState[l] !== false);
+        const allOn = lics.every((l) => licenseState[l] !== false);
         const allChip = document.createElement("div");
         allChip.className = "dlc-chip" + (allOn ? " on" : "");
         allChip.style.color = allOn ? "var(--text2)" : "";
@@ -5863,7 +5866,7 @@
       function toggleAllLicenses(currentlyAllOn) {
         const lics = getKnownLicenses();
         const newState = !currentlyAllOn;
-        lics.forEach(l => licenseState[l] = newState);
+        lics.forEach((l) => (licenseState[l] = newState));
         saveLicenseState();
         rebuildLicBar();
         renderSidebar();
@@ -5872,8 +5875,18 @@
 
       // Simple rotating palette for licence chips
       const LIC_PALETTE = [
-        "#4ade80","#60a5fa","#f87171","#fbbf24","#a78bfa","#fb923c",
-        "#f472b6","#2dd4bf","#818cf8","#34d399","#e879f9","#38bdf8",
+        "#4ade80",
+        "#60a5fa",
+        "#f87171",
+        "#fbbf24",
+        "#a78bfa",
+        "#fb923c",
+        "#f472b6",
+        "#2dd4bf",
+        "#818cf8",
+        "#34d399",
+        "#e879f9",
+        "#38bdf8",
       ];
       const licColorMap = {};
       let licColorIdx = 0;
@@ -5954,7 +5967,8 @@
       function getVisibleProducts() {
         return state.products.filter((p) => {
           if (p.dlcGroup && dlcState[p.dlcGroup] === false) return false;
-          if (p.license != null && licenseState[p.license] === false) return false;
+          if (p.license != null && licenseState[p.license] === false)
+            return false;
           return true;
         });
       }
@@ -6665,7 +6679,7 @@ ${selectedProducts.length < 2 ? '<div class="empty-state">Select at least 2 prod
         const last = hist[hist.length - 1];
         const p = state.products.find((x) => x.name === name);
         if (p && last) {
-          const u = p.isWeight ? (p.weight || 1) : (p.items || 1);
+          const u = p.isWeight ? p.weight || 1 : p.items || 1;
           p.marketPrice = last.marketPrice;
           p.onlineBuyPrice = last.onlineBuyPrice;
           p.onlineItemProfit = last.onlineItemProfit;
@@ -6697,7 +6711,10 @@ ${selectedProducts.length < 2 ? '<div class="empty-state">Select at least 2 prod
                 : od < 0
                   ? "down"
                   : "same";
-            const escapedName = name.replace(/\\/g, "\\\\").replace(/'/g, "\\'").replace(/"/g, "&quot;");
+            const escapedName = name
+              .replace(/\\/g, "\\\\")
+              .replace(/'/g, "\\'")
+              .replace(/"/g, "&quot;");
             histHTML += `<div class="hist-item">
         <span class="hdate">${h.date}</span>
         <span>Market: <b>${fmt(h.marketPrice)}</b></span>
