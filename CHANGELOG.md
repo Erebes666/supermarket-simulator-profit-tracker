@@ -1,6 +1,37 @@
 # Changelog
 
-All notable changes to Supermarket Simulator Profit Tracker will be documented here.
+## All notable changes to Supermarket Simulator Profit Tracker will be documented here.
+
+---
+
+## [v2.7] - 2026-04-07
+
+### Fixed
+
+- Storage errors are no longer silent: if the browser's 5 MB localStorage limit is ever hit, a visible red warning banner now appears explaining that the last save failed and prompting you to export a backup.
+
+### Added
+
+- Live graph preview
+  - The profit history chart now updates live as you type prices or move the discount slider - showing where the new entry would land before you save it
+    Preview lines are removed automatically if you cancel or clear the inputs
+
+- Price adjustment buttons updated: replaced -10% / -5% with Reset and +15%, buttons are now Reset · +2.5% · +5% · +10% · +15%
+- Reset restores the market sell price field to the last saved value
+
+- Discount Tracking
+- Discount slider : New row in the "Log a price update" section below the ±% quick buttons. Drag from 0% (OFF) to 100% to apply a discount to the market sell price before saving. The row turns red when active and displays the selected percentage live.
+- Live preview with discount. The preview panel now shows discounted profits alongside "No disc: $X" reference values so you can compare both before committing.
+- Discount badge in history. Entries saved with a discount show a 🏷 -X% badge in the price history list. Entries without a discount are unchanged.
+- Undiscounted reference lines in chart. When any history entry has a discount, the profit chart gains two dotted lines (green = Online/box, blue = Pickup/box) showing what profits would have been without the discount. The dotted lines merge with the solid lines at non-discounted entries and branch away at discounted ones, giving a clear visual of the discount's impact over time.
+- Backward compatible - Existing history entries and backups are unaffected; the new fields (discountPct, undiscountedOnlineBoxProfit, undiscountedPickupBoxProfit) are only added when a discount is actually used.
+- Zero line on the chart - a thin red dashed line is drawn at y=0, but only when at least one data point actually goes negative. If all values stay positive the line stays hidden, so it won't clutter charts with healthy margins.
+
+### Changed
+
+- Price history is now capped at 25 entries per product (1 default + 24 manual). When the cap is reached, the oldest manual entry is removed to make room for the new one after closing and reopening in browser. The default entry is always preserved.
+- Aligned price history table - the history section is now a proper <table> with fixed columns: Date | Market $ | Buy $ | Online/box | Pickup/box (if applicable) | Discount (column only appears if any entry has a discount) | Δ Profit | delete button. Each column aligns cleanly across all rows, and the header row has a subtle background to distinguish it.
+- Charts: Switched from smooth/curved lines to straight lines for more accurate data representation between data points.
 
 ---
 

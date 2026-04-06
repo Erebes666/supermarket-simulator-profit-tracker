@@ -14,7 +14,7 @@ An unofficial fan-made profit tracking tool for [Supermarket Simulator](https://
 
 | File                                     | Description                                 |
 | ---------------------------------------- | ------------------------------------------- |
-| `supermarketSimulator-tracker_v2_6.html` | The app - open this in your browser         |
+| `supermarketSimulator-tracker_v2_7.html` | The app - open this in your browser         |
 | `supermarket-tracker-data-v1.2.1.csv`    | Default product data for game version 1.2.1 |
 | `LICENSE`                                | MIT licence                                 |
 | `README.md`                              | This file                                   |
@@ -25,7 +25,7 @@ An unofficial fan-made profit tracking tool for [Supermarket Simulator](https://
 
 ## 🚀 How to use
 
-1. Download `supermarketSimulator-tracker_v2_6.html`
+1. Download `supermarketSimulator-tracker_v2_7.html`
 2. Open it in any modern browser (Chrome, Firefox, Edge, Safari)
 3. That's it - no install, no server, no account needed
 
@@ -52,7 +52,7 @@ The app ships with built-in default data for **game version 1.2.1**. If the game
 
 ### How to update product data
 
-1. Open `supermarket-tracker-export.csv` in any spreadsheet app (Excel, Google Sheets, LibreOffice) or a plain text editor (better as Excel can change your document)
+1. Open `supermarket-tracker-data-v1.2.3.csv` in any spreadsheet app (Excel, Google Sheets, LibreOffice) or a plain text editor (better as Excel can change your document)
 2. Edit the values you need - prices, new products, items per box, etc.
 3. In the app, click **Import CSV** and paste in your updated CSV content (not the file, its content)
 4. The app will load your new data while preserving any price history you've already logged, as long as product names haven't changed
@@ -104,7 +104,7 @@ Full sortable and filterable product table with:
 
 Ranks all products with logged prices by profitability. Useful for quickly spotting your best earners.
 
-### 🗂️ Licence Content
+## 🗂️ Licence Content
 
 Side-by-side comparison of all products of the selected licence (ALL excluded), with a profit chart and key stats for each.
 
