@@ -23,7 +23,7 @@ An unofficial fan-made profit tracking tool for [Supermarket Simulator](https://
 
 ---
 
-## 🚀 How to use
+## 🚀 How to use the file
 
 1. Download `supermarketSimulator-tracker_v2_8.html`
 2. Open it in any modern browser (Chrome, Firefox, Edge, Safari)
@@ -32,6 +32,17 @@ An unofficial fan-made profit tracking tool for [Supermarket Simulator](https://
 Your data is saved automatically in your browser's local storage and persists between sessions as long as you use the same browser.
 
 > **Private/Incognito mode:** All browsers block localStorage in private browsing: your data won't be saved in that mode. Use a normal window.
+
+---
+
+## 🚀 How to use the tool
+
+The main functionality is used as follow:
+1. Each morning some product price will change. Input thoses changes in the app before opening and adapt prices if needed.
+2. You only need 2 mains values:
+  - **Market Price / selling price of product**: found in the computer under the prices app
+  - **Online Price/box**: The cost of buying a box of that product Online via the computer (found either in the computer - Market app or by scanning the product with the tablet)
+3. Then, if needed, apply changes (discount or %increase) to market price before saving and logging to history
 
 ---
 
