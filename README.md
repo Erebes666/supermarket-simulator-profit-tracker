@@ -38,11 +38,11 @@ Your data is saved automatically in your browser's local storage and persists be
 ## 🚀 How to use the tool
 
 The main functionality is used as follow:
-1. Each morning some product price will change. Input thoses changes in the app before opening and adapt prices if needed.
-2. You only need 2 mains values:
-  - **Market Price / selling price of product**: found in the computer under the prices app
+1. Each morning the price of some products will change. Input thoses changes in the app before opening and adapt prices if needed.
+2. You only need 2 values:
+  - **Market Price / selling price of product**: found in the computer under the prices' app
   - **Online Price/box**: The cost of buying a box of that product Online via the computer (found either in the computer - Market app or by scanning the product with the tablet)
-3. Then, if needed, apply changes (discount or %increase) to market price before saving and logging to history
+3. Then, if needed, apply changes (discount or % price increase) to market price before saving and logging to history
 
 ---
 
