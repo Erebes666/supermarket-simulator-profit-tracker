@@ -4,6 +4,93 @@
 
 ---
 
+## [v2.8] - 2026-04-08
+
+### Added
+
+- Discount Visibility: Discount status is now visible across the entire app whenever a product has an active discount on its latest saved entry
+- "Unit/slot" column to the Product List (between Units/box and Slots/box), showing how many items fit per shelf slot
+- Added Multi-sort to the Product List - a "⇅ Multi-sort" button in the table header opens a priority-based sort builder. Add up to 13 levels (one per column), each with its own field and Asc/Desc direction. Sort applies live. Clicking any column header resets back to single-column sort.
+- Split the "Product" column in the Product List table into two separate columns: Category and Brand, allowing independent sorting on each
+- Added Category and Brand filter dropdowns to the topbar, dynamically populated from product data. Both new filters stack with existing filters (search, storage, DLC, license)
+  **Fully backward compatible with existing JSON backups and CSV imports (data structure unchanged)**
+- Click-for-product-details function now works across all major views - not just the Products tab
+  -- Dashboard: Recent price changes, Biggest movers, Most updated products, and Online-only products ranked are all now clickable
+  -- Licence Content tab: product cards are now clickable
+  -- Compare Products tab: product cards are now clickable
+  -- Top Profit tab: all three leaderboard columns (Online/Box, Pickup/Box, Pickup Difference) are now clickable rows
+- Extended row/card hover highlight to Leaderboard (Top Profit), Licence Content, and Compare Products tabs - clickable items now consistently light up across the whole app
+- When importing a CSV that contains the same product name more than once, the app now detects the conflict and shows a warning modal before doing anything.
+  You can choose:
+  --Keep first occurrence - later duplicates are ignored
+  --Keep last occurrence - earlier duplicates are overwritten
+  --Cancel - import is aborted, nothing changes
+- Cancelling the duplicate modal now fully cleans up pending state, so a subsequent import starts fresh.
+- CSV rows with an empty Category field are now skipped automatically. The import result message tells you how many rows were skipped and why, instead of silently creating broken products.
+- You can now see how many items you can fit in a storage slot (e.g.: shelf) and how many storage slots are needed to fit the content of one box.This allows for better planning.
+- Added Unit/slot and Slots/box to multi-sort options
+
+### Changed
+
+- Reversed Multi-sort button state - now green (active-looking) by default, dims on hover; turns grey when multi-sort is actually in use. Multi-sort button is more visible for users to notice
+- Produce stall items now display Slots/box = 1 instead of "-"
+- Product detail panels now show Items/slot and Slots/box for produce stall (weight-based) products
+- The error message when saving a price now says "both must be greater than 0" instead of the vague "please enter both prices"
+- Product table: rename "Units" --> "Units/box" and add "Slots/box" column header
+- Compare tab cards: add Items/slot + Slots/box rows after Items/box
+- License tab cards: add Items/box, Items/slot + Slots/box rows after Storage
+- Search now also matches brand names, not just product name and category
+- "License Content" tab now shows a helpful message when you're in Storage view instead of a confusing prompt
+- Consistent spelling: "Strawberry Flavour" now matches the other ice cream products
+- Consistent spelling: tab renamed from "Licence Content" to "License Content" to match the rest of the app
+- Dark/Light mode toggle now visually behaves the standard way (on = light, off = dark)
+- You can now press Escape to close any open popup
+
+### Fixed
+
+- Fixed backward compatibility bug where importing any saves from before the Category/Brand column split (versions prior to 2.8) would result in merging columns back, missing or undefined category and/or brand fields. Old saves are now fully backward compatible.
+- Dashboard Tab "Top 7 - Pickup profit/box" chart now displays a "No pickup option available" message instead of a broken empty graph when no pickup-eligible products are visible in the current selection
+- "Top 7 - Online profit/box" dashboard chart no longer glitches when no licences are selected - now shows a clean "No products available in the current selection." message, consistent with the Pickup chart behaviour.
+- Fixed Slots/box column sorting (was incorrectly sorting by ShelfCap instead of the computed slots per box value)
+- Dashboard charts: Hovering over a bar now shows the full product name in the tooltip, even when the axis label is truncated (e.g.: "Cutlery Set - Silver..."). Affects the Top 7 Online, Top 7 Pickup, and Profit Margin % charts
+- Product details: Items per box vcalue (or Weight per box for some items) is now always visible in the stats panel, including for products without a pickup option
+- Close button on product detail window is now a square with a full clickable area (no more precision clicking on the x character)
+- Fixed "Pineappel" typo --> "Pineapple"; old backups are automatically corrected on restore.
+- When erasing a price history entry in product details' window opened from any part of the dashboard tab the graph disapears
+- Discount banner no longer overlaps the close button
+- The average profit shown on the dashboard was lower than it should be because products without any price data were being counted as $0
+- Products with no prices could incorrectly appear in "Top 7" and leaderboard rankings
+- After typing a price in the product detail popup and then clearing it, a ghost "Preview" tick would remain stuck on the chart's timeline
+- Custom storage types added via CSV import had unreadable badge colours when using Light mode
+- Entering a negative or zero sell price would be silently saved without any warning
+- Dashboard average profit no longer shows "NaN" when some products have no price data
+- Profit progress bars in the product table no longer break on empty or negative values
+- Sorting by the "Discount" column now actually works (both single-click and multi-sort)
+- CSV import with duplicate product names no longer risks silently losing data mid-flow
+- Product names from imported CSVs are now sanitized to prevent script injection (Malicious CSV content can't execute scripts. No visual change for normal data)
+- Eggs profit data now correctly matches its product entry (was mismatched due to a naming typo)
+- CSV header detection no longer accidentally skips data rows in edge cases
+- After clicking "Reset All", any active sorting configuration from the multi-sort panel would survive the reset
+- Toggling off a license group that was selected in the sidebar would leave the sidebar in a broken highlighted state
+- Filters, license chips and DLC chips were being rebuilt twice every time the app loaded, doing unnecessary work
+- On a completely fresh install (no saved data), the filter dropdowns and license/DLC bars could appear empty
+- Product names containing special characters imported from a CSV could potentially break parts of the interface
+- CSV Import: HasPickup column now defaults to false when blank or unrecognised, instead of silently treating the product as having pickup
+- CSV Import: values containing commas are now handled correctly (quoted fields per RFC-4180 are no longer misparsed)
+- CSV Import: license IDs are now consistently treated as strings, preventing filter chip mismatches after importing
+- CSV Import: sidebar group selection is now reset after an import, preventing a stale/empty view
+- JSON Restore: sidebar group selection is now reset after restoring a backup
+- JSON Restore: license IDs are normalised to strings on restore, same as import
+- Reset All: sidebar selection and view mode are fully reset (was leaving a stale active group and "By Storage/License" state)
+- Duplicate price history entries are no longer created if you save the same product twice on the same day with the same prices - the existing entry is updated instead
+- Storage full error now always displays even if you had previously dismissed the warning banner
+- "Download CSV Template" now exports true default data, not your current edited prices (that's what "Export Current CSV" is for)
+- Stars rating no longer shows stale values after an import that removes all pickup products
+- License chip colours are correctly reassigned after a Reset All, CSV import, or JSON restore
+- Products with no known prices showed $0.00 profit instead of "-" unconfigured products were initialized to 0 instead of null, making them appear as zero-profit items in tables and averages. They now correctly display a dash.
+
+---
+
 ## [v2.7] - 2026-04-07
 
 ### Fixed
