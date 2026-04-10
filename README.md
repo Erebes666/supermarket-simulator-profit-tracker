@@ -6,7 +6,7 @@ An unofficial fan-made profit tracking tool for [Supermarket Simulator](https://
 
 > 🌍 _The interface is in English but the tool is straightforward to use - just open the file in your browser._
 
-![App screenshot](https://github.com/Erebes666/supermarket-simulator-profit-tracker/blob/main/Assets/SuperMarketTracker_UI1.png)
+![App screenshot](https://github.com/Erebes666/supermarket-simulator-profit-tracker/blob/main/Assets/SupermarketSimulatorProfitTracker.gif)
 
 ---
 
