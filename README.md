@@ -202,4 +202,4 @@ MIT - see [LICENSE](LICENSE) for details.
 ## Feedback & Bug Reports
 
 - 🐛 Found a bug? [Open an issue](https://github.com/Erebes666/supermarket-simulator-profit-tracker/issues)
-- 💬 Want to chat? You can find me in the Supermarket Simulator Discord [Discord](https://discord.gg/noktagames) under the username Nix - Erebe6666
+- 💬 Want to chat? You can find me in the [Supermarket Simulator Discord](https://discord.gg/noktagames) under the username Nix - Erebe6666
