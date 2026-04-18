@@ -6,7 +6,7 @@ An unofficial fan-made profit tracking tool for [Supermarket Simulator](https://
 
 > 🌍 _The interface is in English but the tool is straightforward to use - just open the file in your browser._
 
-![App screenshot](https://github.com/Erebes666/supermarket-simulator-profit-tracker/blob/main/Assets/SuperMarketTracker_UI1.png)
+![App screenshot](https://github.com/Erebes666/supermarket-simulator-profit-tracker/blob/main/Assets/SupermarketSimulatorProfitTracker_v2_9.gif)
 
 ---
 
@@ -15,7 +15,7 @@ An unofficial fan-made profit tracking tool for [Supermarket Simulator](https://
 | File | Description |
 | -------------------------------------------- | ------------------------------------------- |
 | `supermarketSimulator-tracker_v2_9.html` | The app - open this in your browser |
-| `supermarket-tracker-template.csv` | Default product data for game version 1.2.1 |
+| `supermarket-tracker-template.csv` | Default product data for game version 1.2.7 |
 | `LICENSE` | MIT licence |
 | `README.md` | This file |
 | `Assets` | Screenshots and gifs of the UI |
@@ -56,7 +56,7 @@ The app ships with built-in default data for **game version 1.2.7**. If the game
 
 ### How to update product data
 
-1. Open `supermarket-tracker-data-v1.2.1.csv` in any spreadsheet app (Excel, Google Sheets, LibreOffice) or a plain text editor (preferred as Excel can silently alter your file and aesier to paste content during import)
+1. Open `supermarket-tracker-data-v1.2.7.csv` in any spreadsheet app (Excel, Google Sheets, LibreOffice) or a plain text editor (preferred as Excel can silently alter your file and aesier to paste content during import)
 2. Edit the values you need - prices, new products, items per box, etc.
 3. In the app, click **Import CSV** and paste in your updated CSV content (not the file itself, its content)
 4. The app will load your new data while preserving any price history you've already logged, as long as product names haven't changed
