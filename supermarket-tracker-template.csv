@@ -1,0 +1,315 @@
+# Supermarket Simulator Profit Tracker - CSV Format Reference
+# ─────────────────────────────────────────────────────────────
+# COLUMN GUIDE:
+#   License       : Base game: 0-29 | DLC: DLC-{Name}-{Tier} e.g. DLC-Bakery-1
+#   Category      : Product category e.g. Soda, Meat, Cake
+#   Brand         : Brand name, or - if none (produce, generic items)
+#   Storage       : Shelf | Fridge | Freezer | Produce Stall | Bakery Shelf | Pegboard | Hanger Rack | Ice Cream Stand
+#   ItemsOrWeight : Number of items per box, OR weight in kg for produce (IsWeightBased=true)
+#   ShelfCap      : How many items fit on one shelf slot
+#   MarketSellPrice : Default in-game market sell price per item (or per kg for produce)
+#   OnlineBuyPrice  : Default online order buy price per full box
+#   LocalMarket   : e.g. Deli and Grocery | Meat and Dairy | Green Market | Liquor Store | Janitorial Supply
+#   HasPickup     : true | false (false for all DLC products currently)
+#   IsWeightBased : true | false (true for produce sold by weight)
+#   IsVending     : true | false (vending machine compatible products)
+#   DLC           : DLC group name: Bakery | Clothing | Electronics | Hardware | Essentials | IceCream | (blank for base game)
+# ─────────────────────────────────────────────────────────────
+# NAME RULE: Product name is built as "Category - Brand" or just "Category" if Brand is - or blank
+# WARNING: Do not change Category+Brand of existing products - this changes the name and loses price history
+# ─────────────────────────────────────────────────────────────
+License,Category,Brand,Storage,ItemsOrWeight,ShelfCap,MarketSellPrice,OnlineBuyPrice,LocalMarket,HasPickup,IsWeightBased,IsVending,DLC
+0,Cereal,Chokipik,Shelf,12,12,5.98,35.88,Deli and Grocery,true,false,false,
+0,Sliced Bread,Ron's,Shelf,12,12,3.96,11.88,Deli and Grocery,true,false,false,
+0,Flour,Kraftung,Shelf,8,8,3.71,6.32,Deli and Grocery,true,false,false,
+0,Oil,Lespieds,Shelf,12,12,4.5,18,Deli and Grocery,true,false,false,
+0,Pasta,Panzati,Shelf,8,8,3.12,7.92,Deli and Grocery,true,false,false,
+0,Sugar Powdered,Susu,Shelf,12,12,4.83,13.8,Deli and Grocery,true,false,false,
+1,Bottled Water,Aoette,Fridge,16,8,2.66,15.2,Deli and Grocery,true,false,true,
+1,Cheese,Compte,Fridge,9,9,3.4,16.11,Meat and Dairy,true,false,false,
+1,Coffee Dark Roast,Narvalo,Shelf,8,8,10.48,55.92,Deli and Grocery,true,false,false,
+1,Eggs - 8 pack,Bio,Fridge,12,12,3.98,23.88,Meat and Dairy,true,false,false,
+1,Milk,Bourlait,Fridge,16,8,2.4,12,Meat and Dairy,true,false,false,
+1,Black Tea,Tea Palace,Shelf,20,20,5.78,55,Deli and Grocery,true,false,false,
+2,Peanut Butter,PB's,Shelf,12,12,5.4,35.4,Deli and Grocery,true,false,false,
+2,Flour,Farine,Shelf,8,8,6.78,31.92,Deli and Grocery,true,false,false,
+2,Olive Oil,Tupiges,Shelf,12,12,5.68,35.88,Deli and Grocery,true,false,false,
+2,Pasta Spaghetti,Elo,Shelf,8,8,6.62,30.8,Deli and Grocery,true,false,false,
+2,Rice Basmati,Lustupacru,Shelf,10,10,6.91,39.5,Deli and Grocery,true,false,false,
+2,Salt,Laba,Shelf,16,16,2.17,12,Deli and Grocery,true,false,false,
+3,Bio Juice,Orange Juice,Fridge,16,8,2.81,13.6,Deli and Grocery,true,false,true,
+3,Soda,Cola,Fridge,24,12,2.58,12,Deli and Grocery,true,false,true,
+3,Soda,Zap,Fridge,24,12,2.6,15.6,Deli and Grocery,true,false,true,
+3,Bio Juice,Apple Juice,Fridge,16,8,2.81,13.6,Deli and Grocery,true,false,true,
+3,Milk 6-pack,Labol,Shelf,6,6,11.25,22.5,Meat and Dairy,true,false,false,
+3,Soda,Turko,Fridge,24,12,2.12,9.6,Deli and Grocery,true,false,true,
+4,Cake,Bon Papa,Shelf,15,15,2.1,11.25,Deli and Grocery,true,false,true,
+4,Cake,Pepites,Shelf,18,18,4.2,37.8,Deli and Grocery,true,false,false,
+4,Candy,Bonbek,Shelf,12,12,4.18,23.88,Deli and Grocery,true,false,true,
+4,Cereal,Crispy Chibli,Shelf,12,12,5.62,30,Deli and Grocery,true,false,false,
+4,Chocolat Bar,Chocotte,Shelf,12,12,3.92,21.36,Deli and Grocery,true,false,true,
+4,Yoghurt,Frugen,Fridge,30,30,2,26.7,Deli and Grocery,true,false,true,
+5,Bleach,Jajavevel,Shelf,8,8,4.73,17.6,Janitorial Supply,true,false,false,
+5,Cleaner,Touprop,Shelf,12,12,3.05,19.8,Janitorial Supply,true,false,false,
+5,Dishwasher Tablet,Cleandish,Shelf,12,6,20.54,159,Janitorial Supply,true,false,false,
+5,Hand Soap,Savion,Shelf,12,12,2.1,9,Janitorial Supply,true,false,false,
+5,Shampoo,Kaya,Shelf,12,12,6.06,44.04,Janitorial Supply,true,false,false,
+5,Toilet Paper,Poudou,Shelf,4,2,15.41,41.08,Janitorial Supply,true,false,false,
+6,Cheese Mozzarella,Don Bernardo,Fridge,9,9,5.18,25.92,Meat and Dairy,true,false,false,
+6,Cheese Parmesan,Don Bernardo,Fridge,9,9,5.43,27.9,Meat and Dairy,true,false,false,
+6,Honey,Hone,Shelf,12,12,11.2,79.08,Deli and Grocery,true,false,false,
+6,Tuna,Stark,Fridge,16,8,7.34,78.24,Meat and Dairy,true,false,false,
+6,Eggs - 4 pack,Bio,Fridge,12,12,2.13,11.88,Meat and Dairy,true,false,false,
+6,Sugar Powdered,Pablo,Shelf,12,12,12,72,Deli and Grocery,true,false,false,
+7,Apple,-,Produce Stall,5.04,42,26.95,61.74,Green Market,true,true,false,
+7,Tomato,-,Produce Stall,5.040302267,42,26.2,60.03,Green Market,true,true,false,
+7,Carrot,-,Produce Stall,4.021212121,67,7.2,13.27,Green Market,true,true,false,
+7,Garlic,-,Produce Stall,4.02,67,24.2,44.22,Green Market,true,true,false,
+7,Kiwi,-,Produce Stall,5.04,63,13.75,31.5,Green Market,true,true,false,
+7,Lemon,-,Produce Stall,5.004780115,77,23.01,52.35,Green Market,true,true,false,
+7,Mango,-,Produce Stall,5.099688474,34,14.12,32.74,Green Market,true,true,false,
+7,Mushroom,-,Produce Stall,1.008433735,56,18.26,8.37,Green Market,true,true,false,
+8,Butter,Paysan,Fridge,24,24,2.63,37.2,Deli and Grocery,true,false,false,
+8,Cereal,Honey Bees,Shelf,12,12,5.22,33,Deli and Grocery,true,false,false,
+8,Chicken,Mwef,Freezer,4,4,9.32,22.6,Meat and Dairy,true,false,false,
+8,French Fries,Vandame's,Freezer,12,12,6.09,44.28,Deli and Grocery,true,false,false,
+8,Pizza Mixed,DeNiro,Freezer,32,16,5.13,91.2,Deli and Grocery,true,false,false,
+8,Potato Bag,Miam,Shelf,4,2,5.32,14.2,Deli and Grocery,true,false,false,
+9,Cheese,Mimolette,Fridge,9,9,4.07,19.8,Meat and Dairy,true,false,false,
+9,Coffee Light Roast,Narvalo,Shelf,8,8,11.91,57.76,Deli and Grocery,true,false,false,
+9,Bottled Water,Montcuq,Fridge,16,8,2.82,15.84,Deli and Grocery,true,false,true,
+9,Eggs - 12 pack,Bio,Fridge,12,12,6.28,35.88,Meat and Dairy,true,false,false,
+9,Pasta Elbows,Lustupacru,Shelf,8,8,6.11,28.4,Deli and Grocery,true,false,false,
+9,Sugar Brown,Susu,Shelf,12,12,6.83,54.6,Deli and Grocery,true,false,false,
+9,Tea Green,Tea Palace,Shelf,20,20,7.32,104.6,Deli and Grocery,true,false,false,
+10,Moussaka,Ronpoint,Fridge,24,12,13.88,170.88,Deli and Grocery,true,false,false,
+10,Salmon,NordicHarbor,Fridge,20,20,10.08,126,Meat and Dairy,true,false,false,
+10,Scallop Gratin,Prypiat,Fridge,24,12,3.57,45.12,Deli and Grocery,true,false,false,
+10,Steak,Bovora,Fridge,32,32,13.04,287.68,Meat and Dairy,true,false,false,
+10,Sushi Large,Ulego,Fridge,8,4,25.49,145.68,Meat and Dairy,true,false,false,
+10,Sushi Small,Ulego,Fridge,16,8,20.99,248.8,Meat and Dairy,true,false,false,
+10,Veal Chop,Bovora,Fridge,32,32,15.87,317.44,Meat and Dairy,true,false,false,
+11,Crab Stick,Sans,Freezer,24,24,9.94,140.4,Deli and Grocery,true,false,false,
+11,Hot Sauce,Hothot,Shelf,12,12,3.97,27.24,Deli and Grocery,true,false,false,
+11,Icecream Chocolate,MaxiCone,Freezer,24,12,4.99,74.88,Deli and Grocery,true,false,false,
+11,Ketchup,Kekette,Shelf,12,12,3.08,23.88,Deli and Grocery,true,false,false,
+11,Mayonnaise,Yoyo,Shelf,12,12,10.12,83.76,Deli and Grocery,true,false,false,
+11,Pizza Cheddar,ChezzyPizz,Freezer,32,16,8.34,166.72,Deli and Grocery,true,false,false,
+12,Melon,-,Produce Stall,9,6,4.58,18.72,Green Market,true,true,false,
+12,Onion,-,Produce Stall,5.040776699,42,11.33,25.96,Green Market,true,true,false,
+12,Pear,-,Produce Stall,5.03963964,28,12.21,27.97,Green Market,true,true,false,
+12,Pineapple,-,Produce Stall,5,5,5.02,11.4,Green Market,true,true,false,
+12,Potato,-,Produce Stall,5.118932039,32,9.06,21.09,Green Market,true,true,false,
+12,Squash,-,Produce Stall,10.40068493,8,6.42,30.37,Green Market,true,true,false,
+12,Zucchini,-,Produce Stall,4.92,41,17.05,38.13,Green Market,true,true,false,
+12,Watermelon,-,Produce Stall,40,4,0.9,16.4,Green Market,true,true,false,
+12,Artichoke,-,Produce Stall,4.800539084,12,16.32,35.62,Green Market,true,true,false,
+13,Beer Blonde Ale - 6 pack,Fess,Shelf,18,18,11.83,152.1,Liquor Store,true,false,false,
+13,Beer Blonde Ale - Keg,Fess,Shelf,6,6,26.38,131.88,Liquor Store,true,false,false,
+13,Beer Blonde Ale,Fess,Fridge,15,15,3.05,24.75,Liquor Store,true,false,true,
+13,Beer Lager,Teochew,Fridge,15,15,4.25,37.5,Liquor Store,true,false,true,
+13,Chips,Covidos,Shelf,16,8,5.53,52,Deli and Grocery,true,false,true,
+13,Houmous,Bibi,Fridge,16,8,4.05,41.76,Deli and Grocery,true,false,false,
+13,Vodka,Eay,Shelf,12,12,12.12,103.92,Liquor Store,true,false,false,
+14,Chips,Chipos,Shelf,16,8,6.27,66.88,Deli and Grocery,true,false,true,
+14,Flour,Sublett's,Shelf,8,8,9.49,44.64,Deli and Grocery,true,false,false,
+14,Mashed Potatoes,Puray,Shelf,12,12,5.19,47.88,Deli and Grocery,true,false,false,
+14,Pepper,Afyon,Shelf,16,16,9.02,103.04,Deli and Grocery,true,false,false,
+14,Rice,Elo,Shelf,10,10,4.87,29.5,Deli and Grocery,true,false,false,
+14,Sandwich Bread,Ron's,Shelf,8,8,1.83,6.8,Deli and Grocery,true,false,false,
+14,Sugar Powdered,Boully,Shelf,12,12,6.16,52.8,Deli and Grocery,true,false,false,
+15,Bleach,WC Boeff,Shelf,6,6,6.9,28.56,Janitorial Supply,true,false,false,
+15,Cleaner,Kilemol,Shelf,12,12,9.19,73.56,Janitorial Supply,true,false,false,
+15,Dishwasher Tablet,Boum,Shelf,12,6,15.94,131.88,Janitorial Supply,true,false,false,
+15,Cleaner,Yamo,Shelf,12,6,7.62,57.12,Janitorial Supply,true,false,false,
+15,Dish Soap Durian,Sapu,Shelf,12,12,5.95,47.64,Janitorial Supply,true,false,false,
+15,Toilet Paper,Bidet,Shelf,4,2,17.44,43.6,Janitorial Supply,true,false,false,
+16,Galette Ham&Cheese,Prypiat,Fridge,24,12,10.56,163.44,Deli and Grocery,true,false,false,
+16,Ground Beef,Bovora,Fridge,20,20,8.52,110,Meat and Dairy,true,false,false,
+16,Ham Pastry,Ronpoint,Fridge,24,12,12.06,186.72,Deli and Grocery,true,false,false,
+16,Ham,B&K,Fridge,20,20,5.57,74.2,Meat and Dairy,true,false,false,
+16,Lasagna,Ronpoint,Fridge,24,12,15.59,287.76,Deli and Grocery,true,false,false,
+16,Proscuito,Sapore,Fridge,20,20,7.41,92.6,Meat and Dairy,true,false,false,
+16,Chicken leg,Bovora,Fridge,16,16,5.02,45.92,Meat and Dairy,true,false,false,
+17,Coffee Medium Roast,Narvalo,Shelf,8,8,13.24,68.32,Deli and Grocery,true,false,false,
+17,Soda,Justsistu,Fridge,24,12,2.6,15.6,Deli and Grocery,true,false,true,
+17,Soda,Kouje,Fridge,24,12,2.8,16.8,Deli and Grocery,true,false,true,
+17,Soda,Pulp,Fridge,24,12,2.68,16.08,Deli and Grocery,true,false,true,
+17,Soda,Ropico,Fridge,24,12,3.2,19.2,Deli and Grocery,true,false,true,
+17,Sugar Light Brown,Daron,Shelf,12,12,6.24,49.92,Deli and Grocery,true,false,false,
+18,Green Beans,MrBean,Freezer,12,12,3.06,19.32,Deli and Grocery,true,false,false,
+18,Icecream Vanilla,MaxiCone,Freezer,24,12,5.2,75.6,Deli and Grocery,true,false,false,
+18,Icecream,Bonbek,Freezer,24,12,6.99,98.64,Deli and Grocery,true,false,false,
+18,Pizza,Bigtony,Freezer,32,16,9.84,196.8,Deli and Grocery,true,false,false,
+18,Potato Pops,Spok,Freezer,12,12,10.37,88.92,Deli and Grocery,true,false,false,
+18,Veggie Mix,Ege,Freezer,12,12,6.09,44.28,Deli and Grocery,true,false,false,
+19,Beer Blonde Ale,BK,Fridge,15,15,2.09,16.5,Liquor Store,true,false,true,
+19,Beer Lager - 6 pack,Teochew,Shelf,18,18,13.04,161.82,Liquor Store,true,false,false,
+19,Beer Lager - Keg,Teochew,Shelf,6,6,26.56,132.78,Liquor Store,true,false,false,
+19,Vodka,Magnat,Shelf,12,12,13.69,109.56,Liquor Store,true,false,false,
+19,Whiskey,Grand Marnier,Shelf,12,12,22.39,223.92,Liquor Store,true,false,false,
+19,Wine,Chebon,Shelf,12,12,15.27,107.76,Liquor Store,true,false,false,
+20,Cheese Parmesan,Eros,Fridge,9,9,6.12,31.5,Meat and Dairy,true,false,false,
+20,Cheese,Gruyere,Fridge,9,9,7.16,32.22,Meat and Dairy,true,false,false,
+20,Clotted Cream,Etron,Fridge,16,8,20.15,248,Meat and Dairy,true,false,false,
+20,Pasta Penne,Parillo,Shelf,8,8,2.45,3.84,Deli and Grocery,true,false,false,
+20,Rice,Uncle Tony's,Shelf,10,10,10.78,59.9,Deli and Grocery,true,false,false,
+20,Sugar Cane,Daron,Shelf,12,12,3.08,9.24,Deli and Grocery,true,false,false,
+20,Yoghurt,Madone,Fridge,30,30,1.65,16.5,Deli and Grocery,true,false,true,
+21,Avocado,-,Produce Stall,5,25,9.68,22,Green Market,true,true,false,
+21,Banana,-,Produce Stall,5.069565217,39,5.06,11.66,Green Market,true,true,false,
+21,Grapefruit,-,Produce Stall,5,20,10.38,23.6,Green Market,true,true,false,
+21,Pumpkin,-,Produce Stall,10,2,3.01,13.7,Green Market,true,true,false,
+21,Papaya,-,Produce Stall,10.35019157,23,28.71,135.07,Green Market,true,true,false,
+21,Clementine,-,Produce Stall,4,80,6.6,12,Green Market,true,true,false,
+22,Cleaner,Wesh,Shelf,12,12,9.22,61.44,Janitorial Supply,true,false,false,
+22,Dishwasher Tablet,Cemagik,Shelf,8,8,12.42,39.76,Janitorial Supply,true,false,false,
+22,Dish Soap Lemon,Mouss,Shelf,12,12,9.1,42,Janitorial Supply,true,false,false,
+22,Fabric Softener,Souplesse,Shelf,12,6,9.52,57.12,Janitorial Supply,true,false,false,
+23,Book,ABC,Shelf,8,8,8.1,20.24,Deli and Grocery,true,false,false,
+23,Book,Colors,Shelf,8,8,8,20,Deli and Grocery,true,false,false,
+23,Book,Donnine,Shelf,8,8,11.34,32.4,Deli and Grocery,true,false,false,
+23,Book,Electromagnetic Field,Shelf,8,8,9.98,31.92,Deli and Grocery,true,false,false,
+23,Book,I Won't Share,Shelf,8,8,5.97,15.92,Deli and Grocery,true,false,false,
+23,Book,Mother and Child,Shelf,8,8,10.07,26,Deli and Grocery,true,false,false,
+24,Cleaner,Le Triangle,Shelf,12,12,5.1,21.12,Janitorial Supply,true,false,false,
+24,Cat Food,Miaoumiam,Shelf,12,6,3.86,11.88,Deli and Grocery,true,false,false,
+24,Cat Food,Patpat,Shelf,12,6,2.09,8.64,Deli and Grocery,true,false,false,
+24,Dog Food,Patpat,Shelf,16,8,30.54,325.76,Deli and Grocery,true,false,false,
+25,Cake,Gerbe,Shelf,15,15,30.06,360.75,Deli and Grocery,true,false,true,
+25,Cake,Marbre,Shelf,18,18,5.93,46.44,Deli and Grocery,true,false,false,
+25,Chips,Vin's,Shelf,16,8,5.38,34.4,Deli and Grocery,true,false,true,
+25,Chocolate Spread,Patatartine,Shelf,12,12,5.61,22.44,Deli and Grocery,true,false,false,
+25,Soda Can - 6 pack,Cola,Shelf,24,12,4.48,30.72,Deli and Grocery,true,false,false,
+25,Soda Can - 6 pack,Zap,Shelf,24,12,4.25,30,Deli and Grocery,true,false,false,
+25,Bottled Water,Fort-Lacs,Fridge,16,8,3.5,20,Deli and Grocery,true,false,true,
+26,Fabric Softener,Toudou,Shelf,12,6,9.52,57.12,Janitorial Supply,true,false,false,
+26,Paper Towel,Compact,Shelf,4,2,19.04,47.6,Janitorial Supply,true,false,false,
+26,Toilet Paper,Petus,Shelf,4,2,18.7,44,Janitorial Supply,true,false,false,
+26,Toothpaste,Signoulos,Shelf,24,24,7.75,74.4,Janitorial Supply,true,false,false,
+27,Book,Krok,Shelf,8,8,9.45,25.2,Deli and Grocery,true,false,false,
+27,Book,Once Upon a Time,Shelf,8,8,9.66,25.76,Deli and Grocery,true,false,false,
+27,Book,Piticha,Shelf,8,8,10.2,27.2,Deli and Grocery,true,false,false,
+27,Book,The Surprise,Shelf,8,8,9.84,26.24,Deli and Grocery,true,false,false,
+27,Book,Vintage Storybook,Shelf,8,8,10.95,29.2,Deli and Grocery,true,false,false,
+27,Book,Wombat,Shelf,8,8,12.06,32.16,Deli and Grocery,true,false,false,
+28,Cake,Prairie,Shelf,18,18,6.21,48.6,Deli and Grocery,true,false,false,
+28,Cake,St Michmich,Shelf,15,15,30.62,367.5,Deli and Grocery,true,false,true,
+28,Chocolate Bar,Denorme,Shelf,12,12,5,16.68,Deli and Grocery,true,false,true,
+28,Chocolate Powder,Boudain,Shelf,16,16,5.09,25.44,Deli and Grocery,true,false,false,
+28,Sugar,Daron,Shelf,12,12,6.45,49.92,Deli and Grocery,true,false,false,
+28,Yoghurt,Yowp,Fridge,30,30,1.8,18,Deli and Grocery,true,false,true,
+29,Beer Blonde Ale - 6 pack,BK,Shelf,18,18,14.97,179.64,Liquor Store,true,false,false,
+29,Beer Blonde Ale - Keg,Dehl,Shelf,6,6,27.7,138.48,Liquor Store,true,false,false,
+29,Whiskey,Jack Sublett,Shelf,12,12,20.25,162,Liquor Store,true,false,false,
+29,Whisky,Japanese,Shelf,12,12,33.79,324.36,Liquor Store,true,false,false,
+29,Wine,Heng,Shelf,12,12,10.4,78,Liquor Store,true,false,false,
+29,Wine,Pouilleux,Shelf,12,12,12.1,85.44,Liquor Store,true,false,false,
+DLC-Bakery-1,Bagel Frozen,-,Bakery Shelf,24,8,2.77,12.96,-,false,false,false,Bakery
+DLC-Bakery-1,Bread Frozen,-,Bakery Shelf,4,2,2.18,1.44,-,false,false,false,Bakery
+DLC-Bakery-1,Croissant Frozen,-,Bakery Shelf,18,9,4.28,17.28,-,false,false,false,Bakery
+DLC-Bakery-1,Donut Frozen,-,Bakery Shelf,16,8,2.97,9.6,-,false,false,false,Bakery
+DLC-Bakery-1,Muffin Frozen,-,Bakery Shelf,24,12,3.37,17.28,-,false,false,false,Bakery
+DLC-Bakery-2,Baguette Frozen,-,Bakery Shelf,6,6,3.48,8.64,-,false,false,false,Bakery
+DLC-Bakery-2,Cinnamon Swirl Frozen,-,Bakery Shelf,24,8,4.5,28.8,-,false,false,false,Bakery
+DLC-Bakery-2,Puff Pastry Swirl Frozen,-,Bakery Shelf,16,16,3,19.2,-,false,false,false,Bakery
+DLC-Bakery-2,Cookie Frozen,-,Bakery Shelf,18,18,2.97,10.8,-,false,false,false,Bakery
+DLC-Bakery-2,Dinner Rolls Frozen,-,Bakery Shelf,16,8,3.37,11.52,-,false,false,false,Bakery
+DLC-Bakery-3,Empanadas Frozen,-,Bakery Shelf,18,18,3.48,25.92,-,false,false,false,Bakery
+DLC-Bakery-3,Focaccia Frozen,-,Bakery Shelf,12,6,5.02,18.72,-,false,false,false,Bakery
+DLC-Bakery-3,Obi-non Frozen,-,Bakery Shelf,6,6,3,7.2,-,false,false,false,Bakery
+DLC-Bakery-3,Pastel de Nata Frozen,-,Bakery Shelf,24,24,3.48,34.56,-,false,false,false,Bakery
+DLC-Bakery-3,Pretzel Frozen,-,Bakery Shelf,24,12,4.16,23.04,-,false,false,false,Bakery
+DLC-Clothing-1,Women High Heels,Aurelia,Shelf,8,4,28.72,183.84,-,false,false,false,Clothing
+DLC-Clothing-1,Basic Tank Top,Bareform,Hanger Rack,8,4,15.94,87.92,-,false,false,false,Clothing
+DLC-Clothing-1,Hoodie,CoverCraft,Hanger Rack,6,3,18.84,77.94,-,false,false,false,Clothing
+DLC-Clothing-1,Training Shoes,Dadydas,Shelf,4,2,43.71,139.88,-,false,false,false,Clothing
+DLC-Clothing-1,Hat,Fendergo,Pegboard,8,4,8.78,43.92,-,false,false,false,Clothing
+DLC-Clothing-1,Flip-Flop,Hawai,Shelf,8,4,15.98,79.92,-,false,false,false,Clothing
+DLC-Clothing-1,Leather Belt,IronHide,Hanger Rack,20,10,16.95,233.8,-,false,false,false,Clothing
+DLC-Clothing-2,Men's Cotton T-Shirt,AtlasCotton,Hanger Rack,8,4,14.37,71.84,-,false,false,false,Clothing
+DLC-Clothing-2,Crew Socks,Montford,Pegboard,12,6,14.37,107.76,-,false,false,false,Clothing
+DLC-Clothing-2,Lounge Pants,Nestwear,Hanger Rack,12,6,21.74,179.88,-,false,false,false,Clothing
+DLC-Clothing-2,Men's Boxer Briefs,Raven,Shelf,12,6,26.09,215.88,-,false,false,false,Clothing
+DLC-Clothing-2,Classic Men's Shoe,Regal,Shelf,8,4,22.03,121.52,-,false,false,false,Clothing
+DLC-Clothing-2,Women's Cotton Underwear,Reiss,Shelf,12,6,16.81,139.08,-,false,false,false,Clothing
+DLC-Clothing-3,Women's Shoe,Lumina,Shelf,4,2,31.22,99.92,-,false,false,false,Clothing
+DLC-Clothing-3,Raincoat,Stormborne,Hanger Rack,4,2,18.84,51.96,-,false,false,false,Clothing
+DLC-Clothing-3,Shorts,SunHem,Hanger Rack,10,5,20.29,139.9,-,false,false,false,Clothing
+DLC-Clothing-3,Trousers,Tailorstride,Hanger Rack,12,6,28.97,239.76,-,false,false,false,Clothing
+DLC-Clothing-3,Women's V-Neck Tee,Veloura,Hanger Rack,8,4,17.82,98.32,-,false,false,false,Clothing
+DLC-Clothing-3,Men's Sports Shoe,Vortex,Shelf,4,2,26.07,71.92,-,false,false,false,Clothing
+DLC-Electronics-1,Emergency LED,BrightLite,Pegboard,9,3,13.74,82.44,-,false,false,false,Electronics
+DLC-Electronics-1,Emergency LED Soft,BrightLite,Pegboard,9,3,14.19,85.14,-,false,false,false,Electronics
+DLC-Electronics-1,Powerbank,ChargeWave,Pegboard,6,3,28.77,119.04,-,false,false,false,Electronics
+DLC-Electronics-1,Lightning Charging Cable,VoltEdge,Pegboard,10,5,13.48,89.9,-,false,false,false,Electronics
+DLC-Electronics-1,USB-C Charging Cable,VoltEdge,Pegboard,12,6,13.68,109.44,-,false,false,false,Electronics
+DLC-Electronics-1,Wall Adapter,WoltEdge,Pegboard,10,5,7.5,50,-,false,false,false,Electronics
+DLC-Electronics-2,Flashlight,GearLite,Shelf,16,8,16.95,187.04,-,false,false,false,Electronics
+DLC-Electronics-2,Battery 6x,PowerMax,Pegboard,18,9,5.84,67.86,-,false,false,false,Electronics
+DLC-Electronics-2,Phone,TalkBox,Shelf,20,10,20.29,279.8,-,false,false,false,Electronics
+DLC-Electronics-2,Fast Car Charger,VoltDrive,Pegboard,12,6,11.98,95.88,-,false,false,false,Electronics
+DLC-Electronics-2,HDMI Cable,VoltLink,Pegboard,10,5,5.95,38.4,-,false,false,false,Electronics
+DLC-Electronics-2,Walkie-Talkie,Vox-Pax,Shelf,20,10,21.74,299.8,-,false,false,false,Electronics
+DLC-Electronics-3,HeadPhones,AuraSound,Pegboard,6,3,13.32,53.28,-,false,false,false,Electronics
+DLC-Electronics-3,Flash Drive,Diskora,Pegboard,24,12,14.98,239.76,-,false,false,false,Electronics
+DLC-Electronics-3,Keyboard,Keynova,Shelf,8,4,15.02,82.88,-,false,false,false,Electronics
+DLC-Electronics-3,Electric Toothbrush,OralWave,Shelf,28,14,11.92,222.6,-,false,false,false,Electronics
+DLC-Electronics-3,Video Doorbell,Secure,Pegboard,8,4,23.17,127.84,-,false,false,false,Electronics
+DLC-Electronics-3,Wireless Mouse,SoftTech,Pegboard,6,3,14.82,59.28,-,false,false,false,Electronics
+DLC-Electronics-3,Bluetooth Speaker,SonicDrop,Shelf,16,8,18.84,207.84,-,false,false,false,Electronics
+DLC-Hardware-1,Hammer Multitool,Forge,Pegboard,8,4,28.99,159.92,-,false,false,false,Hardware
+DLC-Hardware-1,Multiscrewdriver,Gripx,Pegboard,8,4,18.01,99.36,-,false,false,false,Hardware
+DLC-Hardware-1,Tape Measure,Mezurex,Pegboard,8,4,8.43,43.52,-,false,false,false,Hardware
+DLC-Hardware-1,Precision Nail Kit,Nailcore,Pegboard,10,5,21.66,149.4,-,false,false,false,Hardware
+DLC-Hardware-2,Glue Gun,Glusim,Pegboard,6,3,14.17,54.84,-,false,false,false,Hardware
+DLC-Hardware-2,Wall Hook,Ironit,Pegboard,16,8,6.37,63.68,-,false,false,false,Hardware
+DLC-Hardware-2,Cable Clips,Nanoco,Pegboard,12,6,4.45,33.36,-,false,false,false,Hardware
+DLC-Hardware-2,Superglue,Penfix,Pegboard,12,6,9.27,71.76,-,false,false,false,Hardware
+DLC-Hardware-2,Mounting Tape,Syneon,Pegboard,12,6,5.09,38.16,-,false,false,false,Hardware
+DLC-Hardware-3,Nose Pliers,Forge,Pegboard,12,6,9.58,74.16,-,false,false,false,Hardware
+DLC-Hardware-3,Level Set,Hyunda,Pegboard,12,6,13.24,102.48,-,false,false,false,Hardware
+DLC-Hardware-3,Portable Toolbox,Kaldra,Shelf,4,2,18.68,51.52,-,false,false,false,Hardware
+DLC-Hardware-3,Screwdriver Set,SteelZone,Pegboard,12,6,13.14,101.76,-,false,false,false,Hardware
+DLC-Hardware-3,Hex Key Set,Ventune,Pegboard,12,6,12.37,95.76,-,false,false,false,Hardware
+DLC-Essentials-1,Baby Lotion,Freshscent,Shelf,24,12,7.89,114.72,-,false,false,false,Essentials
+DLC-Essentials-1,Baby Oil,LullaSoft,Shelf,24,12,7.82,113.76,-,false,false,false,Essentials
+DLC-Essentials-1,Baby Powder,SoftNest,Shelf,24,12,11.19,162.72,-,false,false,false,Essentials
+DLC-Essentials-1,Baby Shampoo,SnuggleDrop,Shelf,24,12,9.7,141.12,-,false,false,false,Essentials
+DLC-Essentials-1,Baby Diapers,BabyJoy,Shelf,4,2,45.46,139.88,-,false,false,false,Essentials
+DLC-Essentials-1,Baby Wipes,BabyJoy,Shelf,24,12,4.27,56.88,-,false,false,false,Essentials
+DLC-Essentials-1,Pacifier,TinyTot,Shelf,24,12,4.12,54.96,-,false,false,false,Essentials
+DLC-Essentials-2,Packed Baby Food,Purebeb,Shelf,24,12,14.27,214.08,-,false,false,false,Essentials
+DLC-Essentials-2,Banana Puree,NanaJoy,Shelf,24,12,4.28,30.24,-,false,false,false,Essentials
+DLC-Essentials-2,Strawberry Puree,NanaJoy,Shelf,24,12,4.56,32.16,-,false,false,false,Essentials
+DLC-Essentials-2,Vegetable Puree,NanaJoy,Shelf,24,12,3.33,23.52,-,false,false,false,Essentials
+DLC-Essentials-2,Baby Bottle,Bango,Shelf,24,12,11.98,179.76,-,false,false,false,Essentials
+DLC-Essentials-3,Canned Green Beans,Beaneto,Shelf,24,12,3.23,23.52,-,false,false,false,Essentials
+DLC-Essentials-3,Canned Cayenne Pepper,BellaCasa,Shelf,24,12,4.16,30.24,-,false,false,false,Essentials
+DLC-Essentials-3,Canned Crushed Pineapple,GoldenTropics,Shelf,24,12,5.96,71.52,-,false,false,false,Essentials
+DLC-Essentials-3,Canned Beans,Kidney Cool Beans,Shelf,24,12,3.28,39.36,-,false,false,false,Essentials
+DLC-Essentials-3,Canned Mixed Fruit,Latsbite,Shelf,24,12,5.84,70.08,-,false,false,false,Essentials
+DLC-Essentials-4,Canned Peaches,Mon-key,Shelf,24,12,3.48,41.76,-,false,false,false,Essentials
+DLC-Essentials-4,Canned Tuna,OceanBay,Shelf,48,24,3.04,44.16,-,false,false,false,Essentials
+DLC-Essentials-4,Canned Tomatoes,RedRock,Shelf,24,12,3.5,25.44,-,false,false,false,Essentials
+DLC-Essentials-4,Canned Tuna,Stark,Shelf,48,24,3.27,47.52,-,false,false,false,Essentials
+DLC-Essentials-4,Canned Corn,SunValley,Shelf,24,12,3.23,23.52,-,false,false,false,Essentials
+DLC-Essentials-5,Aluminum Foil,SureWrap,Shelf,36,18,5.57,125.28,-,false,false,false,Essentials
+DLC-Essentials-5,Chopping Board,Beaneto,Shelf,24,12,4.36,59.76,-,false,false,false,Essentials
+DLC-Essentials-5,Cutlery Set,SilverNest,Shelf,24,12,20.29,335.76,-,false,false,false,Essentials
+DLC-Essentials-5,Dish Sponge,EzClean,Shelf,24,12,11.18,167.76,-,false,false,false,Essentials
+DLC-Essentials-5,Garbage Bags,Waste Management,Shelf,36,18,2.94,60.48,-,false,false,false,Essentials
+DLC-Essentials-6,Grater,Grater,Shelf,12,6,18.62,154.08,-,false,false,false,Essentials
+DLC-Essentials-6,Kitchen Knife,KitchenKnife,Shelf,36,18,17.1,424.44,-,false,false,false,Essentials
+DLC-Essentials-6,Plastic Cups,PlasticCap,Shelf,40,20,5.2,118.8,-,false,false,false,Essentials
+DLC-Essentials-6,Stretch Film,Kitchen Fresh,Shelf,36,18,10.8,243,-,false,false,false,Essentials
+DLC-Essentials-6,Vegetable Peeler,Vegetable Peeler,Pegboard,12,6,10.35,77.64,-,false,false,false,Essentials
+DLC-IceCream-1,Vanilla Flavour,-,Ice Cream Stand,50,50,1,25,-,false,false,false,IceCream
+DLC-IceCream-1,Chocolate Flavour,-,Ice Cream Stand,50,50,1,25,-,false,false,false,IceCream
+DLC-IceCream-1,Strawberry Flavour,-,Ice Cream Stand,50,50,1,25,-,false,false,false,IceCream
+DLC-IceCream-1,Lemon Flavour,-,Ice Cream Stand,50,50,1,25,-,false,false,false,IceCream
+DLC-IceCream-1,Blue Moon Flavour,-,Ice Cream Stand,50,50,1,25,-,false,false,false,IceCream
+DLC-IceCream-1,Forest Fruit Flavour,-,Ice Cream Stand,50,50,1,25,-,false,false,false,IceCream
+DLC-IceCream-1,Cone A,-,Ice Cream Stand,30,30,1,12,-,false,false,false,IceCream
+DLC-IceCream-1,Cone B,-,Ice Cream Stand,30,30,1,12,-,false,false,false,IceCream
+DLC-IceCream-1,Cone C,-,Ice Cream Stand,30,30,1,12,-,false,false,false,IceCream

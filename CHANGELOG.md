@@ -4,6 +4,77 @@
 
 ---
 
+## [v2.9] - 2026-04-16
+
+### Added
+
+- Customization tab (5th tab) for store-level settings
+- Store name setting: Displayed in the header below the logo
+  - Store name included as metadata in CSV and JSON exports and restored automatically when importing a JSON backup
+- Customizable Markup % Presets - define up to 5 personal markup buttons (+%) in the Customization tab. Buttons appear dynamically when editing a product's sell price.
+  - Preset values save to localStorage and persist across sessions.
+  - Preset values saved in JSON exports and imports. If no values detected (version 2.8 and older) will input default values
+  - Reset to Defaults button restores presets to +2.5% / +5% / +7.5% / +10% / +15%.
+- Market Price splited into "Market Price" and "Your Sell Price". The product table's price column is now three separate columns: Market Price, Your Sell Price, and Margin %. Both new columns are sortable (click header or multi-sort). Thi allows for better price visibility.
+- Your Price field: Each product now tracks your actual sell price separately from the game's market price. Set it in the product detail panel when logging a price update.
+- Sweet Spot Markup Indicator: A customizable coloured dot +/-xx% badge appears next to every product's margin across the app: 🟢 0-7% (safe), 🟡 7-10% (caution), 🔴 10%+ (complaint risk), 🟣 negative (below market).
+- Live markup preview: While editing a product's prices, the markup badge updates in real time as you type. The profit preview box also shows a markup summary line.
+- Margin % in price history: The history table in the product detail modal now shows Your Price and Margin % columns for each logged entry.
+- Markup shown in Compare & Licence tabs: Product cards in the Compare and By Licence views now display Market Price, Your Price, and the markup badge.
+- Sweet Spot legend in Customization tab: A new section explains the three colour zones and how the markup is calculated.
+- Auto-fill: entering a new market price now automatically defaults your sell price to that value
+- Missing-price warning banner (bottom-right toast) listing affected products, shown on CSV import and on page load if saved data has gaps (auto-dismisses after 20s)
+- Added inline warning box inside the product detail modal when either price is missing, with a specific message indicating which price(s) are absent
+- Added ⚠ no prices indicator in the Online Profit columns of the main product table for affected rows
+- Added "Online Only" option in the drop down storage type filter
+- Dashboard Tab:
+  -- Products visible: added "matching current filter" sub-label
+  -- Products with prices logged: shows logged/total format with % data coverage to show how much product's price are changed from default values. Allow better visibility if products' price need to be changed from default.
+  -- 🔴 Products in red zone: count of priced products exceeding the yellow markup threshold, with % of priced products affected shown below
+  -- Margin health overview + Discount activity bar
+  -- Needs attention table to show top 3 unpriced items (still on default values)
+  -- Avg markup %: replaces "Avg online profit/box" - shows average markup % across actively priced products in the current filter view; color adapts to sweet spot thresholds (green / yellow / red / Purple)
+  -- Market type breakdown in dashboard tab next to Storage type breakdown
+
+- Added 🍦 Ice Cream Stand tab - appears automatically when the IceCream DLC is enabled, hides when toggled off
+
+- Dashboard Widget Visibility section to the Customization tab: Each of the 11 dashboard panels can now be individually toggled on or off using toggle switches
+- Widget visibility is now included in full JSON backups and restored on import
+- Default tab on load setting in Customization tab: Pick which tab the app opens on (Dashboard, Products, Top Profit, License Content, Compare Products, or Customization). Saved to localStorage and included in settings exports/imports.
+- Sweet Spot zone preview bar: A live color-coded gradient bar now appears above the Zone Reference box in the Sweet Spot section, showing purple / green / yellow / red zones proportionally. Updates in real time as you adjust the thresholds - no need to save first to see the effect.
+- Settings Backup section in Customization tab: New dedicated section with Export Settings and Import Settings buttons. Export Settings downloads a lightweight JSON containing only your customization settings (sweet spot thresholds, markup presets, store name, default sort, widget visibility, default tab, table density) - no product data included. Import Settings restores those settings from either a settings-only export or a full backup JSON, without touching product data or price history.
+
+### Changed
+
+- Optimized Tracker App .html file to reduce size from ~350KB to ~250KB
+- Bakery goods default prices updated from latest version 1.2.7
+- Sell price markup buttons in the product modal are now driven by your saved presets instead of hardcoded values.
+- Log a price update section reorganized
+- Removed KNOWN_PROFITS static lookup table (158 lines of hardcoded profit data)
+- Reorganized price update window layout
+- Reorganized Dashboard Tab
+- Table Density section renamed to Display Preferences: Now also houses the new Default Tab on Load setting, grouped together as visual/layout controls.
+- Dashboard: Top Online Earners and Top Pickup Earners charts expanded from 7 to 10 entries
+- Dashboard: Recent Price Changes log expanded from 8 to 15 entries
+- Dashboard: Storage Type and Market Type donut charts enlarged to better match Recent Price Changes panel height
+
+### Fixed
+
+- Backwards compatible: Existing saves without a Your Price automatically default to the market price (0% markup) on load.
+- Discount not reflected in markup badge
+- Markup stale after deleting a history entry
+- Dashboard markup showed current value instead of historical
+- Products with missing MarketSellPrice or OnlineBuyPrice now correctly show no profit data instead of silently falling back to potentially stale hardcoded values
+- Top Profit tab missing markup
+- "Online buy price (per box)" field in the item detail modal now correctly pre-fills with the latest logged buy price from history, instead of the hardcoded default value. This also applies when restoring a JSON backup.
+
+### Removed
+
+- "Avg online profit/box" from dashboard tab: wasn't adding real value for user as box number was unknown. Replaced by "Avg markup %"
+- "Online-only products ranked (no pickup)" table and repalced by "Online Only" option in the drop down storage type filter
+
+---
+
 ## [v2.8] - 2026-04-10
 
 ### Added
